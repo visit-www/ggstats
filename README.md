@@ -1,4 +1,4 @@
-# Stats
+# GG Stats
 
 A package for evaluating metrics.
 This packages can calculate specificty and sensitivty if TP, FN and FP are provided.
@@ -7,4 +7,4 @@ The package can also calcualte accuracy and PPV from both basic values such as T
 ## Installation
 
 ```sh
-pip install stats
+pip install ggstats
