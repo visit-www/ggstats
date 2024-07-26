@@ -8,5 +8,5 @@ setup(
     author="Gaurav G",
     author_email="lotusheart2016@gmail.com",
     description="A package for evaluating model performance metrics",
-    url="https://github.com/yourusername/your_project",
+    url="https://github.com/visit-www/stats.git",
 )
