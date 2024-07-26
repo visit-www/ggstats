@@ -11,21 +11,21 @@ class EvalMetrics():
         self.spec = spec
         print("Thanks for using this calss. The class EvalMetric is initiated")
 
-    def get_sensitivity(self):
+    def get_sensitivity(self,tp=None,fn=None):
         if self.tp is None or self.fn is None:
             raise ValueError("Insufficient data to calculate sensitivity. Please provide True Positive (tp) and False Negative (fn).")
         self.sens = self.tp / (self.tp + self.fn)
         print(f"Sensitivity is {self.sens}")
         return self.sens
 
-    def get_specificity(self):
+    def get_specificity(self,tn=None,fp=None):
         if self.tn is None or self.fp is None:
             raise ValueError("Insufficient data to calculate specificity. Please provide True Negative (tn) and False Positive (fp).")
         self.spec = self.tn / (self.tn + self.fp)
         print(f"Specificity is {self.spec}")
         return self.spec
 
-    def get_accuracy(self):
+    def get_accuracy(self,sens=None,spec=None,prev=None):
         if self.sens is None:
             self.get_sensitivity()
         if self.spec is None:
@@ -36,7 +36,7 @@ class EvalMetrics():
         print(f"Accuracy is: {accuracy}")
         return accuracy
 
-    def get_ppv(self):
+    def get_ppv(self,sens=None,spec=None,prev=None):
         if self.sens is None:
             self.get_sensitivity()
         if self.spec is None:
